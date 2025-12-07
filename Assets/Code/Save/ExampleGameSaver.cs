@@ -13,13 +13,13 @@ namespace Code
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.O))
             {
                 Debug.Log("Сохранение");
                 SaveGame();
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 Debug.Log("Загрузка");
                 LoadGame();

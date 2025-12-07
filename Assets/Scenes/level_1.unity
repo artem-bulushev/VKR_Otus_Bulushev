@@ -238,8 +238,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_RunSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_JumpSpeed
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_WalkSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Height
@@ -339,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 456656555}
     - target: {fileID: 7595748536341941936, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7669771092372679494, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: _countText
@@ -885,6 +893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232909295}
+  - component: {fileID: 232909296}
   m_Layer: 0
   m_Name: Resources
   m_TagString: Untagged
@@ -909,6 +918,18 @@ Transform:
   - {fileID: 850292682}
   m_Father: {fileID: 73163906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232909296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232909294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f365e6d22ca8b746acae86077070956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.ResourcesGame
 --- !u!1 &300294334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1112859133
 Transform:
   m_ObjectHideFlags: 0
@@ -3092,8 +3113,8 @@ Transform:
   m_GameObject: {fileID: 1112859132}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2608, z: -1.068}
-  m_LocalScale: {x: 1.3, y: 1.8824265, z: 4.6366086}
+  m_LocalPosition: {x: 0, y: -0.1073, z: -0.243}
+  m_LocalScale: {x: 1.3, y: 1.1462688, z: 2.9839025}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1461190377}
@@ -3117,8 +3138,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.0308933, z: 0.8368758}
+  m_Center: {x: 0, y: 0.015446728, z: -0.583505}
 --- !u!23 &1112859135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3621,6 +3642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1458411270}
+  - component: {fileID: 1458411271}
   m_Layer: 0
   m_Name: Spawn Weapon
   m_TagString: Untagged
@@ -3637,12 +3659,26 @@ Transform:
   m_GameObject: {fileID: 1458411269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 3, z: 6}
+  m_LocalPosition: {x: 2, y: 3.1, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 232909295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458411271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458411269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b835f290cb3ca549ada0206de93f5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.SpawnWeapon
+  _weaponPrefab: {fileID: 2578765648604568864, guid: baa467fdab3159444855eb508c8c742e, type: 3}
+  _spawnPoints: {fileID: 1458411270}
 --- !u!1 &1461190376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,12 +3729,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.729177}
+  m_Center: {x: 0, y: 0, z: -0.88649154}
 --- !u!23 &1461190379
 MeshRenderer:
   m_ObjectHideFlags: 0

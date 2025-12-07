@@ -97,8 +97,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Vector3 move = Vector3.zero;
 
                 // Ќа лестнице двигаемс€ по Y и можем чуть-чуть по X
-            move = transform.right * m_Input * m_RunSpeed
-                       + Vector3.up * m_Input * m_RunSpeed;
+            move = transform.right * m_Input * m_RunSpeed * 3f
+                       + Vector3.up * m_Input * m_RunSpeed * 3f;
 
             m_CharacterController.Move(move * Time.deltaTime);
         }

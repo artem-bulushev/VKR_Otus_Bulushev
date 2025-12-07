@@ -10,7 +10,7 @@ namespace Code
             if (other.TryGetComponent(out FirstPersonController player))
             {
                 Destroy(gameObject);
-                Debug.Log("Resources +1");
+                Debug.Log($"{gameObject.name} поднят");
             }
         }
     }
