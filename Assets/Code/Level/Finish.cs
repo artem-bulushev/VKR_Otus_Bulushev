@@ -4,19 +4,19 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Code
 {
-    public class Restart : MonoBehaviour
+    public class Finish : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out FirstPersonController player))
             {
-                RestartLavel();
-                Debug.Log("Уровень перезапущен");
+                FinishLavel();
+                Debug.Log("Уровень пройден");
             }
         }
-        public void RestartLavel()
+        private void FinishLavel()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Pickup : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class Pickup : MonoBehaviour
     public float rotationSpeed = 100f; // Rotation speed in degrees per second
     public float bobbingAmount = 0.1f; // Amplitude of bobbing motion
     public float bobbingSpeed = 1f; // Speed of bobbing motion
+    public FirstPersonController _firstPersonController;
 
     private Vector3 startPosition;
     private float timer;
+
 
     void Start()
     {
@@ -41,6 +44,7 @@ public class Pickup : MonoBehaviour
                 Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
             }
 
+            _firstPersonController.Energy();
             // Destroy the star
             Destroy(gameObject);
 

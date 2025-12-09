@@ -88,6 +88,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        public void Energy()
+        {
+            m_RunSpeed = m_RunSpeed * 2f;
+            m_WalkSpeed = m_WalkSpeed * 2f;
+        }
+
 
         private bool _isOnLadder;
 
