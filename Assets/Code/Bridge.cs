@@ -27,7 +27,7 @@ namespace Code
                 return; // Выходим из метода, если мост не поднят  
             }
 
-            if (other.TryGetComponent(out FirstPersonController player))
+            if (other.TryGetComponent(out FirstPersonController _))
             {
                 ShowBridge();
                 Debug.Log("Мост виден");
@@ -43,7 +43,7 @@ namespace Code
                 return; // Выходим из метода, если мост не поднят  
             }
 
-            if(other.TryGetComponent(out FirstPersonController player))
+            if (other.TryGetComponent(out FirstPersonController _))
             {
                 HideBridge();
                 Debug.Log("Мост не виден");

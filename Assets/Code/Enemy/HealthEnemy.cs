@@ -36,7 +36,11 @@ namespace Code
             }
 
             _healthEnemy -= damage;
-            gameObject.GetComponent<Animator>().SetTrigger("TakingDamage");
+
+            if (gameObject.GetComponent<Animator>() != null)
+            {
+                gameObject.GetComponent<Animator>().SetTrigger("TakingDamage");
+            }
 
             if (_healthEnemy <= 0)
             {

@@ -624,6 +624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197038504}
   - component: {fileID: 197038505}
+  - component: {fileID: 197038506}
   m_Layer: 0
   m_Name: SpawnBridge
   m_TagString: Untagged
@@ -667,6 +668,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &197038506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197038503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d12237708b108441a9c43af2fe4c4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.Features.Bridge.BridgeCreator
+  _bridgePrefab: {fileID: 7992727459075242526, guid: 82d42551b7dbbdd4a8b2b3a9baeec33a, type: 3}
+  _spawnPoints: {fileID: 197038504}
 --- !u!1 &230622948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,6 +2956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114765545}
   - component: {fileID: 1114765546}
+  - component: {fileID: 1114765547}
   m_Layer: 0
   m_Name: SpawnBridge (1)
   m_TagString: Untagged
@@ -2984,6 +3000,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1114765547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114765544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d12237708b108441a9c43af2fe4c4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.Features.Bridge.BridgeCreator
+  _bridgePrefab: {fileID: 7992727459075242526, guid: 82d42551b7dbbdd4a8b2b3a9baeec33a, type: 3}
+  _spawnPoints: {fileID: 1114765545}
 --- !u!114 &1123757431 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6233845063378510113, guid: 0f3294bb120953d4db7dcbdbbac5b2de, type: 3}
@@ -4298,6 +4328,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9131782369288105999, guid: f4d9550775fc48b49bc181ed90da6e06, type: 3}
   m_PrefabInstance: {fileID: 1816003207}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &1816003211 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4739257944328942434, guid: f4d9550775fc48b49bc181ed90da6e06, type: 3}
+  m_PrefabInstance: {fileID: 1816003207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1855001154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4971,7 +5006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2693f0581c8b99c488701f3a767259ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.UI_Menu
-  _canvasSetting: {fileID: 4739257944328942434, guid: f4d9550775fc48b49bc181ed90da6e06, type: 3}
+  _canvasSetting: {fileID: 1816003211}
   _pauseOnOpen: 1
 --- !u!1 &2057854206
 GameObject:
@@ -5036,6 +5071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066280180}
   - component: {fileID: 2066280181}
+  - component: {fileID: 2066280182}
   m_Layer: 0
   m_Name: SpawnBridge (2)
   m_TagString: Untagged
@@ -5079,6 +5115,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2066280182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066280179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d12237708b108441a9c43af2fe4c4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.Features.Bridge.BridgeCreator
+  _bridgePrefab: {fileID: 7992727459075242526, guid: 82d42551b7dbbdd4a8b2b3a9baeec33a, type: 3}
+  _spawnPoints: {fileID: 2066280180}
 --- !u!1001 &39840864126438860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5372,6 +5422,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2787411116078757999, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4904157098060740051, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       propertyPath: _countText
       value: 
@@ -5462,8 +5516,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 119289879858173912, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 928811629}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2069927166784475887, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3872148868751533484}
   m_SourcePrefab: {fileID: 100100000, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+--- !u!1 &3872148868751533483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2069927166784475887, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+  m_PrefabInstance: {fileID: 3872148868751533482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3872148868751533484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3872148868751533483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f1664bbe784e518a449504a392bbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.Features.Inventory.PlayerInventory
 --- !u!4 &4821488569306372143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534829379113732649, guid: 2b20885a489ac894093b3e82135848c4, type: 3}
