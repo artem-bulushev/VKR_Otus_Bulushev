@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a559eb47df4210d43a100b70f8d9c3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.EnemySpawnOne
-  _enemyPrefab: {fileID: 8011217855376162163, guid: 5186d4ac6ead79d4083e7c93fd4b8b6d, type: 3}
+  _enemyPrefab: {fileID: 3170052297267817369, guid: ef26b2dc882f2d741b1e5521ca67f8ef, type: 3}
   _triggerRadius: 7
   _spawnRadius: 0.5
   _targetRoot: {fileID: 143125099}
@@ -2352,7 +2352,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.1
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ccacf61e4d66e294eb28284fae443b44, type: 2}
   m_BuildHeightMesh: 0
@@ -5368,10 +5368,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2787411116078757999, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4904157098060740051, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       propertyPath: _countText
       value: 
       objectReference: {fileID: 456656555}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5275286
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.47076917
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.48754126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5122437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 85.333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961934065156152819, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 88.168
+      objectReference: {fileID: 0}
     - target: {fileID: 6910072446285978852, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -36,10 +36,12 @@ namespace Code
             }
 
             _healthEnemy -= damage;
+            gameObject.GetComponent<Animator>().SetTrigger("TakingDamage");
 
             if (_healthEnemy <= 0)
             {
                 Animator animator = GetComponent<Animator>();
+                //animator.SetTrigger("TakingDamage");
                 if (animator != null)
                 {
                     animator.enabled = false;
@@ -61,13 +63,13 @@ namespace Code
         {
             var component = GetComponent<Renderer>();
             
-            component.material.color = Color.red;
-            yield return new WaitForSeconds(_colorChangeTime);
-            component.material.color = Color.green;
-            yield return new WaitForSeconds(_colorChangeTime);
-            component.material.color = Color.red;
-            yield return new WaitForSeconds(_colorChangeTime);
-            component.material.color = Color.magenta;
+            //component.material.color = Color.red;
+            //yield return new WaitForSeconds(_colorChangeTime);
+            //component.material.color = Color.green;
+            //yield return new WaitForSeconds(_colorChangeTime);
+            //component.material.color = Color.red;
+            //yield return new WaitForSeconds(_colorChangeTime);
+            //component.material.color = Color.magenta;
 
 
             yield return new WaitForSeconds(_lifeTime);
