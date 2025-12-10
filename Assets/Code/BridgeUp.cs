@@ -1,3 +1,4 @@
+using Code.Features.Inventory;
 using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine;
 
@@ -9,10 +10,11 @@ namespace Code
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out FirstPersonController player))
+            if (other.TryGetComponent(out PlayerInventory playerInventory))
             {
                 Destroy(gameObject);
-                Debug.Log($"{gameObject.name} поднят");
+                Debug.Log($"{gameObject.name} пїЅпїЅпїЅпїЅпїЅпїЅ");
+                playerInventory.SetBridge(true);
                 _bridge.RaiseBridge();
             }
         }
