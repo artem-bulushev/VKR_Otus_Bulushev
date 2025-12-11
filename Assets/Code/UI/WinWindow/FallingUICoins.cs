@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Code
@@ -29,6 +31,8 @@ namespace Code
             }
         }
 
+        List<GameObject> _activeCoins = new List<GameObject>();
+
         private void SpawnCoin()
         {
             GameObject coin = Instantiate(_coinPrefab, _spawnArea);
@@ -40,6 +44,20 @@ namespace Code
             coinRect.anchoredPosition = new Vector2(randomX, _spawnArea.rect.height);
 
             StartCoroutine(MoveCoin(coin));
+            _activeCoins.Add(coin);
+        }
+
+        private void OnDisable()
+        {
+            foreach (var coin in _activeCoins)
+            {
+                if (coin != null)
+                {
+                    Destroy(coin);
+                }
+            }
+            _activeCoins.Clear();
+            currentCoins = 0;
         }
 
         private System.Collections.IEnumerator MoveCoin(GameObject coin)
@@ -61,9 +79,15 @@ namespace Code
 
             if (coin != null)
             {
-                Destroy(coin);
+                DestroyCoin(coin);
                 currentCoins--;
             }
+        }
+
+        private void DestroyCoin(GameObject coin)
+        {
+            Destroy(coin);
+            _activeCoins.Remove(coin);
         }
     }
 }

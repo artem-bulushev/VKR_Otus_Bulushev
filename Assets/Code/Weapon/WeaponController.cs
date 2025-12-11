@@ -6,6 +6,8 @@ namespace Code
     {
         private WeaponSelector _weaponSelector;
 
+        public bool IsActive { get; set; } = true;
+
         private void Start()
         {
             Weapon[] weapons = GetComponentsInChildren<Weapon>(true);
@@ -14,6 +16,11 @@ namespace Code
 
         private void Update()
         {
+            if (IsActive==false)
+            {
+                return;
+            }
+            
             SelectWeapon();
 
             if (Input.GetMouseButton(0))
