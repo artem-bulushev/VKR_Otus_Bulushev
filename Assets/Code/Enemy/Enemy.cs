@@ -40,17 +40,17 @@ namespace Code
         //        Debug.Log("Противник атакует");
         //    }
         //}
-        private void OnCollisionEnter(Collision other)
-        {
-            if (other.collider.TryGetComponent(out HP hp))
-            {
-                if (hp.CanTakeDamagePlayer(_damage))
-                {
-                    ContactPoint contact = other.contacts[0];
-                    return;
-                }
-            }
-        }
+        //private void OnCollisionEnter(Collision other)
+        //{
+        //    if (other.collider.TryGetComponent(out HP hp))
+        //    {
+        //        if (hp.CanTakeDamagePlayer(_damage))
+        //        {
+        //            ContactPoint contact = other.contacts[0];
+        //            return;
+        //        }
+        //    }
+        //}
 
         private void OnTriggerEnter(Collider other)
         {
@@ -59,6 +59,16 @@ namespace Code
                 Attack();
                 Debug.Log("Противник атакует");
                 _agent.enabled = false;
+
+                if (other.CompareTag("Player"))
+                {
+                    // Получаем компонент PlayerHealth и вызываем метод TakeDamage
+                    HP hp = other.GetComponent<HP>();
+                    if (hp != null)
+                    {
+                        hp.CanTakeDamagePlayer(_damage);
+                    }
+                }
             }
         }
 

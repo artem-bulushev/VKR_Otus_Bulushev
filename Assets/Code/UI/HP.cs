@@ -39,8 +39,7 @@ namespace Code
         {
             _countText.text = $"{(int)_currentHp}/{_maxHp}";
         }
-
-        private void OnValidate()
+        private void Update()
         {
             EditorApplication.delayCall += () =>
             {
@@ -51,6 +50,19 @@ namespace Code
                 }
             };
         }
+
+        //private void OnValidate()
+        //{
+        //    EditorApplication.delayCall += () =>
+        //    {
+        //        if (_healthScrollbar != null)
+        //        {
+        //            UpdateHealthBar();
+        //            OnCompleteUpdateProgress();
+        //        }
+        //    };
+        //}
+
         public bool CanTakeDamagePlayer(float damage)
         {
             if (_isAlive == false)
@@ -59,7 +71,7 @@ namespace Code
             }
 
             _currentHp -= damage;
-
+            Debug.Log("Получен урон: " + damage + ". Осталось здоровья: " + _currentHp);
 
             if (_currentHp <= 0)
             {
@@ -79,6 +91,7 @@ namespace Code
         {
             OnPlayerDied?.Invoke();
             VisibilityCanvas();
+            Debug.Log("Игрок погиб!");
         }
 
         private void VisibilityCanvas()

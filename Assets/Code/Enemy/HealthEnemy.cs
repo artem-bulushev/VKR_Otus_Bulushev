@@ -44,12 +44,12 @@ namespace Code
 
             if (_healthEnemy <= 0)
             {
-                Animator animator = GetComponent<Animator>();
-                //animator.SetTrigger("TakingDamage");
-                if (animator != null)
-                {
-                    animator.enabled = false;
-                }
+                //Animator animator = GetComponent<Animator>();
+                ////animator.SetTrigger("TakingDamage");
+                //if (animator != null)
+                //{
+                //    animator.enabled = false;
+                //}
                 StartCoroutine(Die());
                 _isAlive = false;
                 return false;

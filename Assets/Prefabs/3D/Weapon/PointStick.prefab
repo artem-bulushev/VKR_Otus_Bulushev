@@ -63,11 +63,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2360047598228500836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9546761dd51653645a61921b68010122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StickAttack
+  _damage: 10
+  _healthEnemy: {fileID: 0}
 --- !u!1001 &4399134834802697857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125,6 +127,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1918116589159637073, guid: baa467fdab3159444855eb508c8c742e, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918116589159637073, guid: baa467fdab3159444855eb508c8c742e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -141,8 +147,30 @@ PrefabInstance:
     - {fileID: 4126517151909880970, guid: baa467fdab3159444855eb508c8c742e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2578765648604568864, guid: baa467fdab3159444855eb508c8c742e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 469079504905622458}
   m_SourcePrefab: {fileID: 100100000, guid: baa467fdab3159444855eb508c8c742e, type: 3}
+--- !u!1 &2217249184815791009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2578765648604568864, guid: baa467fdab3159444855eb508c8c742e, type: 3}
+  m_PrefabInstance: {fileID: 4399134834802697857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &469079504905622458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217249184815791009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9546761dd51653645a61921b68010122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.StickAttack
+  _damage: 5
+  _healthEnemy: {fileID: 2622991413883405319, guid: ef26b2dc882f2d741b1e5521ca67f8ef, type: 3}
 --- !u!4 &4308692414358188895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 488448416679679454, guid: baa467fdab3159444855eb508c8c742e, type: 3}
