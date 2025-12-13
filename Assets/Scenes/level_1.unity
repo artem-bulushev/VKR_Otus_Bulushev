@@ -733,7 +733,7 @@ Transform:
   m_Children:
   - {fileID: 7768192862834323922}
   - {fileID: 4821488569306372143}
-  - {fileID: 1629156401187518724}
+  - {fileID: 6600188858663098317}
   - {fileID: 710070011}
   m_Father: {fileID: 73163906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3462,6 +3462,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1458411270}
   - component: {fileID: 1458411271}
+  - component: {fileID: 1458411272}
+  - component: {fileID: 1458411273}
   m_Layer: 0
   m_Name: Spawn Weapon
   m_TagString: Untagged
@@ -3499,6 +3501,40 @@ MonoBehaviour:
   _resourcePrefab: {fileID: 2578765648604568864, guid: baa467fdab3159444855eb508c8c742e, type: 3}
   _spawnPoints: {fileID: 1458411270}
   _resourceName: "\u041F\u0430\u043B\u043A\u0430"
+--- !u!114 &1458411272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458411269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41881109f57d75f48960fd87d1ce38ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.StickCreator
+  _weaponController: {fileID: 3872148868751533485}
+--- !u!135 &1458411273
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458411269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1461190376
 GameObject:
   m_ObjectHideFlags: 0
@@ -5223,6 +5259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish
       objectReference: {fileID: 0}
+    - target: {fileID: 5388199654549390769, guid: ba0a1f21db42f834ba9d9ed427fd3a54, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6563186951033707009, guid: ba0a1f21db42f834ba9d9ed427fd3a54, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -5271,7 +5311,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1629156401187518725}
   m_SourcePrefab: {fileID: 100100000, guid: ba0a1f21db42f834ba9d9ed427fd3a54, type: 3}
---- !u!1 &39840864126438861 stripped
+--- !u!1 &668694398642502158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 705417030335739842, guid: ba0a1f21db42f834ba9d9ed427fd3a54, type: 3}
   m_PrefabInstance: {fileID: 39840864126438860}
@@ -5336,18 +5376,13 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1941268468}
   m_SourcePrefab: {fileID: 100100000, guid: 82d42551b7dbbdd4a8b2b3a9baeec33a, type: 3}
---- !u!4 &1629156401187518724 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6563186951033707009, guid: ba0a1f21db42f834ba9d9ed427fd3a54, type: 3}
-  m_PrefabInstance: {fileID: 39840864126438860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1629156401187518725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39840864126438861}
+  m_GameObject: {fileID: 668694398642502158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3bb6ec89ef11f428642531b8faa395, type: 3}
@@ -5504,6 +5539,10 @@ PrefabInstance:
       propertyPath: m_JumpSpeed
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 528287307690743475, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_WalkSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1126738868378307062, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5514,6 +5553,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1170142352582104765, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057111290896674996, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2057111290896674996, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
@@ -5621,11 +5664,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 456656558}
     - target: {fileID: 8458627442348129242, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458627442348129242, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       propertyPath: _canvasToToggle
       value: 
       objectReference: {fileID: 155222897}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3976922944677290136, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 119289879858173912, guid: 56e285d2b7aa0cb40831af24bfeb6d85, type: 3}
       insertIndex: -1
@@ -5718,11 +5766,6 @@ MonoBehaviour:
   _bow: {fileID: 1121030407}
   _sword: {fileID: 1065100216}
   _weaponController: {fileID: 3872148868751533485}
-  _castRadius: 1
-  _castDistance: 1
-  _whatToHit:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!135 &3872148868751533493
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5994,9 +6037,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61696a3fc50fbd74b801d15fe4aad34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.EnemySpawnBoss
-  _bossPrefab: {fileID: 8011217855376162163, guid: 96eac4b05f5ae404fa89df0069602ac7, type: 3}
+  _bossPrefab: {fileID: 8867960657160430145, guid: 2c201f6401314d44d8ae94ca75376bab, type: 3}
+  _finish: {fileID: 668694398642502158}
   _spawnPoints: {fileID: 1493181159}
   _bossName: "\u0411\u0440\u043E\u0434\u044F\u0447\u0438\u0439 \u043F\u0435\u0441"
+--- !u!4 &6600188858663098317 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6563186951033707009, guid: ba0a1f21db42f834ba9d9ed427fd3a54, type: 3}
+  m_PrefabInstance: {fileID: 39840864126438860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7607922680911577032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8624336819342833250, guid: 44ee7a407157999469985ea0eb339acc, type: 3}

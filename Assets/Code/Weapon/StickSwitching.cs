@@ -7,9 +7,9 @@ public class StickSwitching : MonoBehaviour
     [SerializeField] private GameObject _bow;
     [SerializeField] private GameObject _sword;
     [SerializeField] private WeaponController _weaponController;
-    public float _castRadius = 1f;
-    public float _castDistance = 10f;
-    public LayerMask _whatToHit; // Слой для проверки
+    //public float _castRadius = 1f;
+    //public float _castDistance = 10f;
+    //public LayerMask _whatToHit; // Слой для проверки
 
     //void Update()
     //{

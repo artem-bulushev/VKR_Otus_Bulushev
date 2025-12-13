@@ -6,7 +6,7 @@ namespace Code
     {
         private WeaponSelector _weaponSelector;
 
-        public bool IsActive { get; set; } = true;
+        public bool IsActive { get; set; } = false;
 
         private void Start()
         {

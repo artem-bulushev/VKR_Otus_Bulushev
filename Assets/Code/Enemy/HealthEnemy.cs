@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace Code
 {
@@ -9,6 +10,7 @@ namespace Code
         [SerializeField] private float _healthEnemy = 3.0f;
         [SerializeField] private float _lifeTime = 5.0f;
         [SerializeField] private float _colorChangeTime = 1.0f;
+        //[SerializeField] private GameObject _finish;
 
         private bool _isAlive = true;
         private float _maxHp;
@@ -60,6 +62,7 @@ namespace Code
 
         public void Death()
         {
+            //_finish.SetActive(true);
             OnEnemyDied?.Invoke();
         }
 
@@ -93,6 +96,12 @@ namespace Code
                     yield return new WaitForSeconds(0.1f);
                 }
             }
+
+            if (gameObject.GetComponent<Animator>() != null)
+            {
+                gameObject.GetComponent<Animator>().SetTrigger("Death");
+            }
+            yield return new WaitForSeconds(_lifeTime);
 
             Destroy(gameObject);
             Death();

@@ -1,5 +1,6 @@
-using UnityStandardAssets.Characters.FirstPerson;
+using Code.Features.Inventory;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Code
 {
@@ -7,10 +8,17 @@ namespace Code
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out FirstPersonController player))
+            //if (other.TryGetComponent(out FirstPersonController player))
+            //{
+            //    Destroy(gameObject);
+            //    Debug.Log($"{gameObject.name} поднят");
+            //}
+
+            if(other.TryGetComponent(out PlayerInventory playerInventory))
             {
                 Destroy(gameObject);
                 Debug.Log($"{gameObject.name} поднят");
+                playerInventory.SetStick(true);
             }
         }
     }
